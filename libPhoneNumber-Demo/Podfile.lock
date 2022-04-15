@@ -1,0 +1,39 @@
+PODS:
+  - libPhoneNumber-iOS (1.0.4)
+  - libPhoneNumberGeocoding (1.0.0):
+    - libPhoneNumber-iOS
+  - libPhoneNumberShortNumber (1.0.0):
+    - libPhoneNumber-iOS
+
+DEPENDENCIES:
+  - libPhoneNumber-iOS (from `https://github.com/iziz/libPhoneNumber-iOS`)
+  - libPhoneNumberGeocoding (from `https://github.com/iziz/libPhoneNumber-iOS`)
+  - libPhoneNumberShortNumber (from `https://github.com/iziz/libPhoneNumber-iOS`)
+
+EXTERNAL SOURCES:
+  libPhoneNumber-iOS:
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+  libPhoneNumberGeocoding:
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+  libPhoneNumberShortNumber:
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+
+CHECKOUT OPTIONS:
+  libPhoneNumber-iOS:
+    :commit: 243e3cb19245fd77492289f2c7360b1560598519
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+  libPhoneNumberGeocoding:
+    :commit: 243e3cb19245fd77492289f2c7360b1560598519
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+  libPhoneNumberShortNumber:
+    :commit: 243e3cb19245fd77492289f2c7360b1560598519
+    :git: https://github.com/iziz/libPhoneNumber-iOS
+
+SPEC CHECKSUMS:
+  libPhoneNumber-iOS: de124f9305ab81328510b08e2f895a8f19ce4854
+  libPhoneNumberGeocoding: e7770d83706de452d077cee83053f04f0cdd6df3
+  libPhoneNumberShortNumber: 6a8cb161afa6edc2276e6f47ce2498814220335a
+
+PODFILE CHECKSUM: 7c44cc2108f1e4606b336d004b1c69f13c9c119f
+
+COCOAPODS: 1.11.2

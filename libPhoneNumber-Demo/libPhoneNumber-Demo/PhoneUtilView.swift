@@ -90,7 +90,7 @@ extension PhoneUtilView {
     do {
       self.searchMade = true
       let parsedPhoneNumber: NBPhoneNumber =
-        try phoneUtil.parse(self.phoneNumber, defaultRegion: Locale.current.regionCode!)
+        try phoneUtil.parse(self.phoneNumber, defaultRegion: "SA")
       self.isValidNumber = self.phoneUtil.isValidNumber(parsedPhoneNumber)
       self.countryCode = parsedPhoneNumber.countryCode.stringValue
       self.nationalNumber = parsedPhoneNumber.nationalNumber.stringValue
