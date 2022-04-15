@@ -23,6 +23,10 @@
 		94AEB65524C2204400204E11 /* FormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AEB65424C2204400204E11 /* FormatterView.swift */; };
 		B37E3260609107A4EDA30CCB /* Pods_libPhoneNumber_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80180D3E4EFC2D805D5F7607 /* Pods_libPhoneNumber_Demo.framework */; };
 		BA1100C783C33B2D6FAEFA07 /* Pods_libPhoneNumber_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A43A8FB43AB1E232CA2F800 /* Pods_libPhoneNumber_DemoTests.framework */; };
+		E24B069528072C0500F3D9DC /* metadataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B069428072C0500F3D9DC /* metadataGenerator.swift */; };
+		E24B06AB28081DEF00F3D9DC /* PhoneNumberMetaData.json in Resources */ = {isa = PBXBuildFile; fileRef = E24B06A828081DEF00F3D9DC /* PhoneNumberMetaData.json */; };
+		E24B06AC28081DEF00F3D9DC /* PhoneNumberMetaDataForTesting.json in Resources */ = {isa = PBXBuildFile; fileRef = E24B06A928081DEF00F3D9DC /* PhoneNumberMetaDataForTesting.json */; };
+		E24B06AD28081DEF00F3D9DC /* ShortNumberMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = E24B06AA28081DEF00F3D9DC /* ShortNumberMetadata.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		94AEB65224C2203A00204E11 /* PhoneUtilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneUtilView.swift; sourceTree = "<group>"; };
 		94AEB65424C2204400204E11 /* FormatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterView.swift; sourceTree = "<group>"; };
 		94AEB65824C2517600204E11 /* libPhoneNumber-iOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "libPhoneNumber-iOS.png"; sourceTree = "<group>"; };
+		E24B069428072C0500F3D9DC /* metadataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = metadataGenerator.swift; path = ../../scripts/metadataGenerator.swift; sourceTree = "<group>"; };
+		E24B06A828081DEF00F3D9DC /* PhoneNumberMetaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhoneNumberMetaData.json; sourceTree = "<group>"; };
+		E24B06A928081DEF00F3D9DC /* PhoneNumberMetaDataForTesting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhoneNumberMetaDataForTesting.json; sourceTree = "<group>"; };
+		E24B06AA28081DEF00F3D9DC /* ShortNumberMetadata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ShortNumberMetadata.json; sourceTree = "<group>"; };
 		F16B3C7B814B59B93E4D0951 /* Pods_libPhoneNumber_Demo_libPhoneNumber_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_libPhoneNumber_Demo_libPhoneNumber_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BAA7C26BB7DAD929FDAFB6 /* Pods-libPhoneNumber-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libPhoneNumber-Demo.debug.xcconfig"; path = "Target Support Files/Pods-libPhoneNumber-Demo/Pods-libPhoneNumber-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,8 +144,10 @@
 		94AEB61B24C21FAD00204E11 /* libPhoneNumber-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				E24B06A728081DEF00F3D9DC /* generatedJSON */,
 				94AEB61C24C21FAD00204E11 /* AppDelegate.swift */,
 				94AEB61E24C21FAD00204E11 /* SceneDelegate.swift */,
+				E24B069428072C0500F3D9DC /* metadataGenerator.swift */,
 				94AEB62024C21FAD00204E11 /* MenuView.swift */,
 				94AEB62224C21FAE00204E11 /* Assets.xcassets */,
 				94AEB65824C2517600204E11 /* libPhoneNumber-iOS.png */,
@@ -161,6 +171,16 @@
 				94AEB62524C21FAE00204E11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E24B06A728081DEF00F3D9DC /* generatedJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E24B06A828081DEF00F3D9DC /* PhoneNumberMetaData.json */,
+				E24B06A928081DEF00F3D9DC /* PhoneNumberMetaDataForTesting.json */,
+				E24B06AA28081DEF00F3D9DC /* ShortNumberMetadata.json */,
+			);
+			path = generatedJSON;
 			sourceTree = "<group>";
 		};
 		ED9DDEF1C13FC357811889E5 /* Frameworks */ = {
@@ -283,8 +303,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B06AD28081DEF00F3D9DC /* ShortNumberMetadata.json in Resources */,
+				E24B06AB28081DEF00F3D9DC /* PhoneNumberMetaData.json in Resources */,
 				94AEB62924C21FAE00204E11 /* LaunchScreen.storyboard in Resources */,
 				94AEB62624C21FAE00204E11 /* Preview Assets.xcassets in Resources */,
+				E24B06AC28081DEF00F3D9DC /* PhoneNumberMetaDataForTesting.json in Resources */,
 				94AEB62324C21FAE00204E11 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B069528072C0500F3D9DC /* metadataGenerator.swift in Sources */,
 				94AEB64D24C2200F00204E11 /* GeocodingView.swift in Sources */,
 				94AEB61D24C21FAD00204E11 /* AppDelegate.swift in Sources */,
 				94AEB65324C2203A00204E11 /* PhoneUtilView.swift in Sources */,
@@ -589,7 +613,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"libPhoneNumber-Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 973LHT5R86;
+				DEVELOPMENT_TEAM = 7A2969MHY5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "libPhoneNumber-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -598,7 +622,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.libPhoneNumber-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "libPhoneNumber-Demo/libPhoneNumber-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -613,7 +637,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"libPhoneNumber-Demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 973LHT5R86;
+				DEVELOPMENT_TEAM = 7A2969MHY5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "libPhoneNumber-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +646,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.libPhoneNumber-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "libPhoneNumber-Demo/libPhoneNumber-Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

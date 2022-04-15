@@ -37,9 +37,24 @@ static NSString *StringByTrimming(NSString *aString) {
 }
 
 - (instancetype)init {
-  return [self initWithZippedDataBytes:kPhoneNumberMetaData
-                      compressedLength:kPhoneNumberMetaDataCompressedLength
-                        expandedLength:kPhoneNumberMetaDataExpandedLength];
+    NSBundle* mainBundle = [NSBundle mainBundle];
+    NSData* metaData = [NSData dataWithContentsOfFile:[mainBundle pathForResource:@"PhoneNumberMetaData"
+                                                                       ofType:@"json"]];
+    self = [super init];
+
+    if (self != nil) {
+      _metadataCache = [[NSCache alloc] init];
+      _metadataMapCache = [[NSCache alloc] init];
+        NSError *error = nil;
+        _phoneNumberDataDictionary = [NSJSONSerialization
+                              JSONObjectWithData:metaData
+                              options:0
+                              error:&error];
+    }
+    return self;
+////  return [self initWithZippedDataBytes:kPhoneNumberMetaData
+//                      compressedLength:kPhoneNumberMetaDataCompressedLength
+//                        expandedLength:kPhoneNumberMetaDataExpandedLength];
 }
 
 - (instancetype)initWithZippedData:(NSData *)data expandedLength:(NSUInteger)expandedLength {
